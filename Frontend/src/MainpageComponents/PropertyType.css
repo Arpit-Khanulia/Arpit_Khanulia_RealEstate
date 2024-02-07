@@ -1,0 +1,153 @@
+.find-property-by,
+.locations {
+  height: 25px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.find-property-by {
+  margin: 0;
+  height: 38px;
+  font-size: 28px;
+  font-family: inherit;
+  color: #000;
+}
+.sorting-options {
+  height: 83px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.mumbai {
+  height: 25px;
+  position: relative;
+  font-size: 18px;
+  display: inline-block;
+  font-family: Nunito;
+  color: #fff;
+  text-align: center;
+}
+.thumbnail-image {
+  cursor: pointer;
+  border: 0;
+  padding: 13px 22px 13px 20px;
+  background-color: rgba(255, 48, 48, 0.6);
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.thumbnail-image:hover {
+  background-color: rgba(255, 74, 74, 0.6);
+}
+.location-text-icon1,
+.result-item-card {
+  height: 336px;
+  border-radius: 5px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.result-item-card {
+  width: 516px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  background-image: url(/public/result-item-card@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 516px;
+}
+.location-text-icon1 {
+  flex: 1;
+  position: relative;
+  object-fit: cover;
+  min-width: 478px;
+  min-height: 336px;
+}
+.results-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  max-width: 100%;
+}
+.bedrooms-icon,
+.bedrooms-icon1,
+.bedrooms-icon2 {
+  position: relative;
+  border-radius: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  min-height: 293px;
+}
+.price-label,
+.property-type1 {
+  justify-content: flex-start;
+  gap: 30px;
+  max-width: 100%;
+}
+.price-label {
+  align-self: stretch;
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  grid-template-columns: repeat(3, minmax(306px, 1fr));
+}
+.property-type1 {
+  width: 1321px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  min-height: 842px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px;
+  color: #ff5a3c;
+  font-family: Nunito;
+}
+@media screen and (max-width: 1050px) {
+  .result-item-card {
+    flex: 1;
+  }
+  .results-container {
+    flex-wrap: wrap;
+  }
+  .price-label {
+    justify-content: center;
+    grid-template-columns: repeat(2, minmax(306px, 530px));
+  }
+}
+@media screen and (max-width: 750px) {
+  .location-text-icon1,
+  .result-item-card {
+    min-width: 100%;
+  }
+  .bedrooms-icon,
+  .bedrooms-icon1,
+  .bedrooms-icon2 {
+    width: 100%;
+  }
+  .price-label {
+    grid-template-columns: minmax(306px, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .find-property-by {
+    font-size: 22px;
+  }
+}

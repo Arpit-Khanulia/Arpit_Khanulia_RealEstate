@@ -1,0 +1,116 @@
+.property-description-icon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  transform: scale(1.152);
+}
+.wrapper-property-description {
+  height: 158px;
+  width: 158px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jenny-white {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.sunshine {
+  height: 25px;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #b1b1b1;
+  display: inline-block;
+}
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.header-group-icon {
+  height: 22px;
+  width: 17px;
+  position: relative;
+}
+.call-9635872558 {
+  width: calc(100% - 56px);
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-family: Nunito;
+  font-size: 18px;
+  background-color: transparent;
+  height: 25px;
+  flex: 1;
+  position: relative;
+  color: #b1b1b1;
+  text-align: center;
+  display: inline-block;
+  min-width: 92px;
+}
+.contact-container,
+.property-button {
+  align-self: stretch;
+  align-items: flex-start;
+}
+.contact-container {
+  border-radius: 5px;
+  border: 1px solid #ff3030;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 11px 20px 10px 19px;
+  gap: 10px;
+}
+.property-button {
+  flex-direction: column;
+  gap: 15px;
+}
+.property-button,
+.property-location,
+.property-price {
+  display: flex;
+  justify-content: flex-start;
+}
+.property-price {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 8px;
+  box-sizing: border-box;
+  min-width: 143px;
+}
+.property-location {
+  width: 407px;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 29px;
+  max-width: 100%;
+  text-align: center;
+  font-size: 22px;
+  color: #000;
+  font-family: Nunito;
+}
+@media screen and (max-width: 450px) {
+  .property-description-icon {
+    flex: 1;
+  }
+  .jenny-white {
+    font-size: 18px;
+  }
+  .property-location {
+    flex-wrap: wrap;
+  }
+}

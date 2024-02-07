@@ -1,0 +1,114 @@
+.lets-take-a {
+  height: 25px;
+  position: relative;
+  font-weight: 600;
+  display: inline-block;
+}
+.quicker-anywhere,
+.search-property-smarter {
+  margin: 0;
+}
+.search-property-smarter-container {
+  margin: 0;
+  height: 76px;
+  position: relative;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #000;
+  text-align: left;
+  display: inline-block;
+}
+.group1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.vector-icon8 {
+  height: 35px;
+  width: 42px;
+  position: relative;
+}
+.play-video {
+  position: relative;
+  font-weight: 600;
+}
+.frame-wrapper,
+.vector-parent3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.vector-parent3 {
+  align-items: center;
+  gap: 10px;
+}
+.frame-wrapper {
+  align-self: stretch;
+  align-items: flex-start;
+  text-align: left;
+  color: #000;
+}
+.ellipse,
+.ellipse-wrapper,
+.group-parent {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.group-parent {
+  width: 391px;
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+}
+.ellipse,
+.ellipse-wrapper {
+  flex-direction: row;
+}
+.ellipse {
+  flex: 1;
+  overflow: hidden;
+  align-items: center;
+  padding: 182px 80px;
+  background-image: url(/public/ellipse@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.ellipse-wrapper {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 0 70px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px;
+  color: #ff5a3c;
+  font-family: Nunito;
+}
+@media screen and (max-width: 750px) {
+  .ellipse {
+    padding: 118px 40px;
+    box-sizing: border-box;
+  }
+  .ellipse-wrapper {
+    padding-bottom: 45px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .search-property-smarter-container {
+    font-size: 22px;
+  }
+  .group-parent {
+    gap: 30px;
+  }
+}

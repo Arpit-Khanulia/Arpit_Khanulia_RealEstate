@@ -1,0 +1,222 @@
+.our-featured-properties,
+.our-properties {
+  position: relative;
+  font-weight: 600;
+}
+.our-featured-properties {
+  margin: 0;
+  height: 38px;
+  font-size: 28px;
+  font-family: inherit;
+  color: #000;
+  display: inline-block;
+}
+.group,
+.our-agents-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.our-agents-text {
+  width: 1280px;
+  overflow-x: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px 29px;
+  min-height: 992px;
+  max-width: 100%;
+}
+.maria-crist-text-child {
+  width: 70px;
+  height: 10px;
+  position: relative;
+}
+.maria-crist-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  min-height: 1225px;
+  max-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 18px;
+  color: #ff5a3c;
+  font-family: Nunito;
+}
+.agent-profile-ellipse-child {
+  width: 92px;
+  height: 92px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.maria-crist {
+  margin: 0;
+  height: 30px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+}
+.agent-profile-ellipse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.contact-us-group-child {
+  height: 55px;
+  width: 55px;
+  position: relative;
+  object-fit: contain;
+}
+.frame-icon {
+  width: 79px;
+  height: 63px;
+  position: relative;
+}
+.etiam-sollicitudin-eget,
+.lorem-ipsum-dolor {
+  margin: 0;
+}
+.lorem-ipsum-dolor-container {
+  height: 50px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  margin-top: -57px;
+}
+.frame-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 63px;
+  max-width: calc(100% - 182px);
+}
+.contact-us-group-item {
+  height: 55px;
+  width: 55px;
+  position: relative;
+  object-fit: contain;
+}
+.contact-us-group,
+.tour-frame {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 1px 0 0;
+  box-sizing: border-box;
+  gap: 36px;
+  max-width: 100%;
+  font-size: 18px;
+}
+.tour-frame {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  gap: 40px;
+  min-height: 303px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 22px;
+  color: #000;
+  font-family: Nunito;
+}
+.find-your-dream {
+  margin: 0;
+  height: 38px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+}
+.contact-us {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #fff;
+  text-align: center;
+}
+.contact-us-text-frame {
+  cursor: pointer;
+  border: 0;
+  padding: 13px 28px 13px 32px;
+  background-color: #ff5a3c;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.contact-us-text-frame:hover {
+  background-color: #e64021;
+}
+.home-find-frame,
+.real-estate-website {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.home-find-frame {
+  align-self: stretch;
+  padding: 30px;
+  box-sizing: border-box;
+  gap: 15px;
+  background-image: url(/public/home-find-frame@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 621px;
+  max-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 28px;
+  color: #000;
+  font-family: Nunito;
+}
+.real-estate-website {
+  width: 100%;
+  position: relative;
+  background-color: #f3f3f3;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 750px) {
+  .maria-crist-text {
+    gap: 40px;
+  }
+  .contact-us-group {
+    gap: 36px;
+  }
+  .tour-frame {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .our-featured-properties {
+    font-size: 22px;
+  }
+  .maria-crist {
+    font-size: 18px;
+  }
+  .find-your-dream {
+    font-size: 22px;
+  }
+}
