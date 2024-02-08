@@ -10,6 +10,13 @@ import { deleteProperty } from '../controller/deleteProperty';
 import { updateProperty } from '../controller/updateproperty';
 import { sendEmail } from '../controller/email';
 import { getPropertiesByPincodeAndType } from '../controller/filterProperty';
+import passport from 'passport';
+
+
+import passportConfig from '../middleware/passportConfig';
+passportConfig(passport);
+
+
 
 
 
@@ -19,13 +26,13 @@ const router = express.Router();
 router
 .post('/login',login)
 .post('/register',register)
-.post('/addproperty',addProperty)
-.post('/filterproperty',getPropertiesByPincodeAndType)
-.delete('/deleteproperty/:id',deleteProperty)
-.put('/updateproperty',updateProperty)
-.get('/allproperty',allProperty)
-.get('/userproperty',userProperty)
-.post('/email',sendEmail)
+.post('/addproperty',passport.authenticate('jwt', { session: false }),addProperty)
+.post('/filterproperty',passport.authenticate('jwt', { session: false }),getPropertiesByPincodeAndType)
+.delete('/deleteproperty/:id',passport.authenticate('jwt', { session: false }),deleteProperty)
+.put('/updateproperty',passport.authenticate('jwt', { session: false }),updateProperty)
+.get('/allproperty',passport.authenticate('jwt', { session: false }),allProperty)
+.get('/userproperty',passport.authenticate('jwt', { session: false }),userProperty)
+.post('/email',passport.authenticate('jwt', { session: false }),sendEmail)
 
 
 

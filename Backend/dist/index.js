@@ -9,11 +9,13 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const database_connection_1 = require("./model/database_connection");
 const cors_1 = __importDefault(require("cors"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const passport_1 = __importDefault(require("passport"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     credentials: true
 }));
+app.use(passport_1.default.initialize());
 app.use((0, cookie_parser_1.default)());
 app.use(express_1.default.json());
 app.use('/', routes_1.router);

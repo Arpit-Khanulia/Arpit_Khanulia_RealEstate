@@ -14,15 +14,18 @@ const deleteProperty_1 = require("../controller/deleteProperty");
 const updateproperty_1 = require("../controller/updateproperty");
 const email_1 = require("../controller/email");
 const filterProperty_1 = require("../controller/filterProperty");
+const passport_1 = __importDefault(require("passport"));
+const passportConfig_1 = __importDefault(require("../middleware/passportConfig"));
+(0, passportConfig_1.default)(passport_1.default);
 const router = express_1.default.Router();
 exports.router = router;
 router
     .post('/login', login_1.login)
     .post('/register', register_1.register)
-    .post('/addproperty', addproperty_1.addProperty)
-    .post('/filterproperty', filterProperty_1.getPropertiesByPincodeAndType)
-    .delete('/deleteproperty/:id', deleteProperty_1.deleteProperty)
-    .put('/updateproperty', updateproperty_1.updateProperty)
-    .get('/allproperty', allproperty_1.allProperty)
-    .get('/userproperty', userproperty_1.userProperty)
-    .post('/email', email_1.sendEmail);
+    .post('/addproperty', passport_1.default.authenticate('jwt', { session: false }), addproperty_1.addProperty)
+    .post('/filterproperty', passport_1.default.authenticate('jwt', { session: false }), filterProperty_1.getPropertiesByPincodeAndType)
+    .delete('/deleteproperty/:id', passport_1.default.authenticate('jwt', { session: false }), deleteProperty_1.deleteProperty)
+    .put('/updateproperty', passport_1.default.authenticate('jwt', { session: false }), updateproperty_1.updateProperty)
+    .get('/allproperty', passport_1.default.authenticate('jwt', { session: false }), allproperty_1.allProperty)
+    .get('/userproperty', passport_1.default.authenticate('jwt', { session: false }), userproperty_1.userProperty)
+    .post('/email', passport_1.default.authenticate('jwt', { session: false }), email_1.sendEmail);

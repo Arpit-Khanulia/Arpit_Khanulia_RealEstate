@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import { connectToDatabase } from './model/database_connection';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import passport from 'passport'
+
 
 
 declare global {
@@ -22,11 +24,12 @@ app.use(cors({
 }));
 
 
+app.use(passport.initialize());
 app.use(cookieParser());
 app.use(express.json());
 app.use('/',router);
 
-
 connectToDatabase();
+
 
 app.listen(3000,()=>console.log('app listening at port 3000'));
