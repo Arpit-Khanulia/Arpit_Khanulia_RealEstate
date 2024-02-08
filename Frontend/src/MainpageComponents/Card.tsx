@@ -2,11 +2,10 @@ import { FunctionComponent, useMemo, type CSSProperties } from "react";
 import "./Card.css";
 
 type LetstakeATourText2Type = {
-  tribbleStoryHouseForRent?: string;
-  prop?: string;
-  beds?: string;
-  baths?: string;
-  sqFt?: string;
+  type?: string;
+  price?: string;
+  Description?: string;
+  location?:string;
 
   /** Style props */
   propBackgroundImage?: CSSProperties["backgroundImage"];
@@ -14,11 +13,10 @@ type LetstakeATourText2Type = {
 };
 
 const LetstakeATourText2: FunctionComponent<LetstakeATourText2Type> = ({
-  tribbleStoryHouseForRent,
-  prop,
-  beds,
-  baths,
-  sqFt,
+  type,
+  location,
+  price,
+  Description,
   propBackgroundImage,
   propHeight,
 }) => {
@@ -68,14 +66,14 @@ const LetstakeATourText2: FunctionComponent<LetstakeATourText2Type> = ({
       </div>
       <div className="footer">
         <div className="tribble-story-house" style={tribbleStoryHouseStyle}>
-          {tribbleStoryHouseForRent}
+          {type}
         </div>
       </div>
       <div className="maria-header">
         <div className="content-frame1">
           <img className="search-bar-icon" alt="" src="/vector-4.svg" />
           <div className="mo">
-            <span>{prop}</span>
+            <span>{price}</span>
             <span className="mo1">Mo</span>
           </div>
         </div>
@@ -84,24 +82,12 @@ const LetstakeATourText2: FunctionComponent<LetstakeATourText2Type> = ({
         <div className="blog-article">
           <div className="terms-conditions">
             <img className="privacy-policy-icon" alt="" src="/vector-5.svg" />
-            <div className="maharashtra">Maharashtra</div>
+            <div className="maharashtra">{location}</div>
           </div>
           <div className="subscribe-area">
             <div className="newsletter-input">
-              <img
-                className="background-colors-icon"
-                alt=""
-                src="/vector-6.svg"
-              />
-              <div className="beds">{beds}</div>
-            </div>
-            <div className="footer-links">
-              <img className="header-title-icon" alt="" src="/vector-7.svg" />
-              <div className="baths">{baths}</div>
-            </div>
-            <div className="search-icon-button">
-              <img className="location-text-icon" alt="" src="/vector-8.svg" />
-              <div className="sq-ft">{sqFt}</div>
+              <p>Discription: </p>
+              <div className="beds">{Description}</div>
             </div>
           </div>
         </div>

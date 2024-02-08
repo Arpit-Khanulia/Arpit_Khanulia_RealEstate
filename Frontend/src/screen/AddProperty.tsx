@@ -88,13 +88,13 @@ const AddProperty = () => {
 
           <select name="type" value={values.type} onChange={handleChange} onBlur={handleBlur} className="select select-bordered w-full max-w-xs">
             <option disabled >Property Type</option>
-            <option>appartment</option>
-            <option>house</option>
-            <option>flat</option>
-            <option>villa</option>
-            <option>land</option>
-            <option>office space</option>
-            <option>basement</option>
+            <option value="Apartment">Apartment</option>
+            <option value="House">House</option>
+            <option value="Flat">Flat</option>
+            <option value="Villa">Villa</option>
+            <option value="Land">Land</option>
+            <option value="Office-Space">Office Space</option>
+            <option value="Basement">Basement</option>
 
           </select>
           <input name="location" value={values.location} onChange={handleChange} onBlur={handleBlur} className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="text" placeholder="Property Location" />

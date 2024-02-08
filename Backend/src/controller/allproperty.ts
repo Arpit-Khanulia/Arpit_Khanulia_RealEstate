@@ -5,6 +5,8 @@ const allProperty = async (req: Request, res: Response) => {
     try {
         
         const properties = await Property.find();
+        console.log('property fetched');
+        
         res.status(200).json(properties);
     } catch (error) {
         res.status(500).send('Error fetching properties');

@@ -27,7 +27,7 @@ router
 .post('/filterproperty',passport.authenticate('jwt', { session: false }),getPropertiesByPincodeAndType)
 .delete('/deleteproperty/:id',passport.authenticate('jwt', { session: false }),deleteProperty)
 .put('/updateproperty',passport.authenticate('jwt', { session: false }),updateProperty)
-.get('/allproperty',passport.authenticate('jwt', { session: false }),allProperty)
+.get('/allproperty',allProperty)
 .get('/userproperty',passport.authenticate('jwt', { session: false }),userProperty)
 .post('/email',passport.authenticate('jwt', { session: false }),sendEmail)
 

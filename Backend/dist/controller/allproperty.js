@@ -5,6 +5,7 @@ const properties_1 = require("../model/properties");
 const allProperty = async (req, res) => {
     try {
         const properties = await properties_1.Property.find();
+        console.log('property fetched');
         res.status(200).json(properties);
     }
     catch (error) {

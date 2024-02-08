@@ -3,12 +3,16 @@ import "./TopNavBar.css";
 import { Link } from "react-router-dom";
 
 import { useAppSelector } from "../Redux/Hooks";
+import { useNavigate } from "react-router-dom";
 
 const TopNavBar: FunctionComponent = () => {
+
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem('user');
     localStorage.removeItem('accessToken');
+    navigate('/');
     window.location.reload();
   }
 

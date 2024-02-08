@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import { useAppDispatch } from "../Redux/Hooks";
 import { propertysaved } from "../Redux/Slices/data";
 import { searchValidationSchema } from "../Schemas";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -26,6 +27,8 @@ const initialValues:initialValuestype = {
 
 
 const ContentFrame: FunctionComponent = () => {
+
+  const navigate = useNavigate();
   
   const dispatch = useAppDispatch();
 
@@ -37,7 +40,7 @@ const ContentFrame: FunctionComponent = () => {
       console.log(values);
       
        dispatch(propertysaved(values))
-       window.location.href = '/searchedproperty';
+       navigate('/searchedproperty');
 
        action.resetForm();
        
@@ -59,13 +62,13 @@ const ContentFrame: FunctionComponent = () => {
             <div className="search-area">
 
 
-              <button className="header-frame">
+             <Link to='/allproperty' className="header-frame"> <button  >
                 <div className="buy">Buy</div>
-              </button>
-              <button className="header-frame1">
+              </button> </Link>
+              <Link className="header-frame1" to='/allproperty'><button>
                 <div className="rent">Rent</div>
-              </button>
-              {data && <Link to='/addproperty'> <button className="header-frame2">
+              </button></Link>
+              {data && <Link to='/addproperty' className="header-frame2"> <button >
                 <div className="sell">Sell</div>
               </button></Link>}
             </div>
@@ -82,13 +85,13 @@ const ContentFrame: FunctionComponent = () => {
 
                   <select  name="type" value={values.type} onChange={handleChange} onBlur={handleBlur} className="property-type btnn line1" >Property Type
                     <option  >Type</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="house">House</option>
-                    <option value="flat">Flat</option>
-                    <option value="villa">Villa</option>
-                    <option value="land">Land</option>
-                    <option value="office-space">Office Space</option>
-                    <option value="basement">Basement</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="House">House</option>
+                    <option value="Flat">Flat</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Land">Land</option>
+                    <option value="Office-Space">Office Space</option>
+                    <option value="Basement">Basement</option>
                   </select>
 
                 <button className="line3">
