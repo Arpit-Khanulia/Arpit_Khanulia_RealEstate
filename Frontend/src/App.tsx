@@ -3,6 +3,7 @@ import LoginScreen from "./screen/LoginScreen"
 import RegisterScreen from "./screen/RegisterScreen"
 import RealEstateWebsite from "./screen/RealEstateWebsite"
 import AddProperty from "./screen/AddProperty"
+import SearchedProperty from "./screen/SearchedProperty"
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/register"  element={<RegisterScreen/> } />
           <Route path="/" element={<RealEstateWebsite />} />
           <Route path="/addproperty" element={<AddProperty />} />
+          <Route path="/searchedproperty" element={<SearchedProperty />} />
   
       </Routes>
     

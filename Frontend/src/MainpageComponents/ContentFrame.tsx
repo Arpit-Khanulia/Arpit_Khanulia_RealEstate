@@ -37,6 +37,7 @@ const ContentFrame: FunctionComponent = () => {
       console.log(values);
       
        dispatch(propertysaved(values))
+       window.location.href = '/searchedproperty';
 
        action.resetForm();
        
