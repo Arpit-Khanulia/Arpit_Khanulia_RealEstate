@@ -13,12 +13,14 @@ const userproperty_1 = require("../controller/userproperty");
 const deleteProperty_1 = require("../controller/deleteProperty");
 const updateproperty_1 = require("../controller/updateproperty");
 const email_1 = require("../controller/email");
+const filterProperty_1 = require("../controller/filterProperty");
 const router = express_1.default.Router();
 exports.router = router;
 router
     .post('/login', login_1.login)
     .post('/register', register_1.register)
     .post('/addproperty', addproperty_1.addProperty)
+    .post('/filterproperty', filterProperty_1.getPropertiesByPincodeAndType)
     .delete('/deleteproperty/:id', deleteProperty_1.deleteProperty)
     .put('/updateproperty', updateproperty_1.updateProperty)
     .get('/allproperty', allproperty_1.allProperty)

@@ -9,6 +9,7 @@ import { userProperty } from '../controller/userproperty';
 import { deleteProperty } from '../controller/deleteProperty';
 import { updateProperty } from '../controller/updateproperty';
 import { sendEmail } from '../controller/email';
+import { getPropertiesByPincodeAndType } from '../controller/filterProperty';
 
 
 
@@ -19,6 +20,7 @@ router
 .post('/login',login)
 .post('/register',register)
 .post('/addproperty',addProperty)
+.post('/filterproperty',getPropertiesByPincodeAndType)
 .delete('/deleteproperty/:id',deleteProperty)
 .put('/updateproperty',updateProperty)
 .get('/allproperty',allProperty)

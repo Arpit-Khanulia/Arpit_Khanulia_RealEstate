@@ -5,18 +5,15 @@ const accessToken = localStorage.getItem('accessToken') || null;
 
 // Define the interface for the user data
 interface UserData {
-    _id: string;
-    username: string;
-    email: string;
-    password: string;
-    wallet: number;
-    transition: {
-      id: string;
-      amount: number;
-      timestamp: string;
-    }[];
-    __v: number;
-  }
+  _id: string;
+  name:string;
+  username: string;
+  email: string;
+  password: string;
+  address:string;
+  phoneno:string;
+
+}
   
   // Define the interface for the response object
   interface UserResponse {
@@ -28,12 +25,12 @@ interface UserData {
 const initialState: UserResponse = {
     user: {
       _id: "",
+      name:"",
       username: "",
       email: "",
       password: "",
-      wallet: 0,
-      transition: [],
-      __v: 0
+      address: "",
+      phoneno: ""
     },
     accessToken: accessToken
   };

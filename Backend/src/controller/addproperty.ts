@@ -5,28 +5,42 @@ interface PropertyDetails {
     uid: string;
     selleremail:string;
     location: string;
-    description: string;
     type: string;
     price: number;
     photoPath: string;
     sell: boolean;
     rent: boolean;
+    pincode:string;
+    description: string;
 }
 
+// unique pid
+// uid
+// seller email
+// Location
+// Type
+// Price
+// Photo path
+// sell
+// rent
+// pincode
+// description
+
 const addProperty = async (req: Request, res: Response) => {
-    const {uid,selleremail, location, description, type, price, photoPath, sell, rent }: PropertyDetails = req.body;
+    const {uid,selleremail, location, description, type, price, photoPath, sell, rent,pincode }: PropertyDetails = req.body;
 
     try {
         const newProperty = new Property({
             uid,
             selleremail,
             location,
-            description,
             type,
             price,
             photoPath,
             sell,
             rent,
+            description,
+            pincode
         });
 
         await newProperty.save();

@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import "./LetstakeATourText2.css";
+import "./Card.css";
 
 type LetstakeATourText2Type = {
   tribbleStoryHouseForRent?: string;
