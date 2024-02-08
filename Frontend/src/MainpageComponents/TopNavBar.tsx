@@ -2,7 +2,22 @@ import { FunctionComponent } from "react";
 import "./TopNavBar.css";
 import { Link } from "react-router-dom";
 
+import { useAppSelector } from "../Redux/Hooks";
+
 const TopNavBar: FunctionComponent = () => {
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('accessToken');
+    window.location.reload();
+  }
+
+  const data = useAppSelector(state=>state.saveUserAndToken.accessToken)
+
+  console.log('access token data',data);
+  
+  
+
   return (
     <header className="top-nav-bar">
       <div className="agent-frame">
@@ -13,14 +28,17 @@ const TopNavBar: FunctionComponent = () => {
       </div>
       <div className="maria-profile">
         <div className="link-group">
-          <button className="btn">
-            <div className="home">Home</div>
-          </button>
-          <div className="quick-links" />
+         
         </div>
       </div>
       <div className="about-us-frame">
+        { data &&
+
         <div className="blog-article-frame">
+          <Link to='/'><button className="btn">
+            <div className="home">Home</div>
+          </button></Link>
+          
           <button className="btn">
             <div className="about">Profile</div>
           </button>
@@ -33,12 +51,16 @@ const TopNavBar: FunctionComponent = () => {
             <div className="about">My Property</div>
           </button>
 
-
         </div>
+        }
       </div>
+
+        { data && <button onClick={handleLogout} className="login-wrapper">Log Out</button>}
+        { !data && <Link to='/login' className="login"><button className="login-wrapper">Login</button></Link>}
+        { !data && <Link to='/register' className="login"><button className="login-wrapper">Register</button></Link>}
+
+  
       
-        <Link to='/login' className="login"><button className="login-wrapper">Login</button></Link>
-        <Link to='/register' className="login"><button className="login-wrapper">Register</button></Link>
       
     </header>
   );

@@ -3,6 +3,7 @@ import { Property } from '../model/properties';
 
 const allProperty = async (req: Request, res: Response) => {
     try {
+        
         const properties = await Property.find();
         res.status(200).json(properties);
     } catch (error) {

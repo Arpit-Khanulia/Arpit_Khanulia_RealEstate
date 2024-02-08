@@ -28,6 +28,31 @@ interface User {
 
   }
 
+  interface Property{
+    _id: string;
+    uid: string;
+    sellerEmail: string;
+    location: string;
+    type: string;
+    price: number|string;
+    photoPath: string;
+    sell: boolean|string;
+    rent: boolean|string;
+    pincode: string;
+    description: string;
+  }
+  interface Propertypost{
+    uid: string;
+    sellerEmail: string;
+    location: string;
+    type: string;
+    price: number|string;
+    photoPath: string;
+    sell: boolean|string;
+    rent: boolean|string;
+    pincode: string;
+    description: string;
+  }
     export const authApi = createApi({
         
         reducerPath: 'authApi',
@@ -61,11 +86,22 @@ interface User {
            }),
            invalidatesTags: ['Auth'],
        }),
+       getProperties: builder.query<Array<Property>, void>({
+           query: () => '/allproperty',
+       }),
+       addProperty: builder.mutation<void, Propertypost>({
+           query: (body) => ({
+               url: '/addproperty',
+               method: 'POST',
+               body,
+           }),
+           invalidatesTags: ['Auth'],
+       }),
 
    }),
 });
 
-export const { useLoginMutation, useRegisterMutation} = authApi;
+export const { useLoginMutation, useRegisterMutation,useGetPropertiesQuery,useAddPropertyMutation} = authApi;
 
 
 

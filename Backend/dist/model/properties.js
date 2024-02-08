@@ -10,25 +10,24 @@ const propertiesSchema = new mongoose_1.default.Schema({
         type: String,
         required: true
     },
-    selleremail: {
-        type: String,
-        required: true
-    },
     location: {
         type: String,
         required: true
     },
-    description: {
+    sellerEmail: {
         type: String,
-        required: true
-    },
-    price: {
-        type: Number,
         required: true
     },
     type: {
         type: String,
         required: true
+    },
+    price: {
+        type: String,
+        required: true
+    },
+    photoPath: {
+        type: String
     },
     sell: {
         type: Boolean,
@@ -38,10 +37,14 @@ const propertiesSchema = new mongoose_1.default.Schema({
         type: Boolean,
         required: true
     },
-    photoPath: {
+    pincode: {
         type: String,
         required: true
-    }
+    },
+    description: {
+        type: String,
+        required: true
+    },
 });
 // model
 const Property = mongoose_1.default.model('Property', propertiesSchema);

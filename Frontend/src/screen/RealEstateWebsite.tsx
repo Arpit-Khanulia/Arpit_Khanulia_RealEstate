@@ -1,8 +1,6 @@
 import { FunctionComponent } from "react";
 import ContentFrame from "../MainpageComponents/ContentFrame";
 import LetstakeATourText2 from "../MainpageComponents/Card";
-import LetstakeATourText1 from "../MainpageComponents/LetstakeATourText1";
-import LetstakeATourText from "../MainpageComponents/LetstakeATourText";
 import PropertyType from "../MainpageComponents/PropertyType";
 import BathroomsIcon from "../MainpageComponents/FeaturesSection";
 import PropertyContainer from "../MainpageComponents/PropertyContainer";
@@ -20,14 +18,6 @@ const RealEstateWebsite: FunctionComponent = () => {
           <h1 className="our-featured-properties">Our Featured Properties</h1>
         </div>
         <div className="our-agents-text">
-          {/* <LetstakeATourText2
-            tribbleStoryHouseForRent="Tribble Story House For Rent"
-            prop="13,000/"
-            beds="3 Beds"
-            baths="2 Baths"
-            sqFt="1500 Sq Ft"
-          /> */}
-          {/* <LetstakeATourText1 /> */}
           <LetstakeATourText2
             tribbleStoryHouseForRent="Luxurious Villa"
             prop="35,000/"

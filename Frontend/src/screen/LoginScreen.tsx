@@ -6,6 +6,7 @@ import { useAppDispatch } from "../Redux/Hooks";
 import { useLoginMutation } from "../Redux/Slices/Auth";
 import { saveUserAndToken } from "../Redux/Slices/User";
 
+
 interface initialValuestype  {
 
 
@@ -40,6 +41,14 @@ const LoginScreen = () => {
   
     if(isLoginSuccess){
       console.log('user logged in successfully frontend',loginData);
+
+      console.log('user data',loginData?.user);
+
+      localStorage.setItem('userid', JSON.stringify(loginData?.user._id));
+      localStorage.setItem('useremail', JSON.stringify(loginData?.user.email));
+
+
+      
 
       // yaha par data store me save karna he 
       dispatch(saveUserAndToken(loginData));
@@ -90,11 +99,7 @@ const LoginScreen = () => {
           </div>
             
             <div className="mt-4 flex justify-between font-semibold text-sm">
-              <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
-                <input className="mr-1" type="checkbox" />
-                <span>Remember Me</span>
-              </label>
-              <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
+
             </div>
             <div className="text-center md:text-left">
               <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>

@@ -3,7 +3,7 @@ import { Property } from '../model/properties';
 
 interface PropertyDetails {
     uid: string;
-    selleremail:string;
+    sellerEmail:string;
     location: string;
     type: string;
     price: number;
@@ -14,36 +14,24 @@ interface PropertyDetails {
     description: string;
 }
 
-// unique pid
-// uid
-// seller email
-// Location
-// Type
-// Price
-// Photo path
-// sell
-// rent
-// pincode
-// description
 
 const addProperty = async (req: Request, res: Response) => {
-    const {uid,selleremail, location, description, type, price, photoPath, sell, rent,pincode }: PropertyDetails = req.body;
+    const data: PropertyDetails = req.body;
+    // const {uid,selleremail, location, description, type, price, photoPath, sell, rent,pincode }: PropertyDetails = req.body;
 
+    console.log('yaha tak to aa gaya data');
+    
+    console.log(req.body);
+    
     try {
-        const newProperty = new Property({
-            uid,
-            selleremail,
-            location,
-            type,
-            price,
-            photoPath,
-            sell,
-            rent,
-            description,
-            pincode
-        });
+        const newProperty = new Property(data);
 
+        console.log('this is new property',newProperty);
+        
+
+        console.log('property added');
         await newProperty.save();
+        
         res.status(201).json(newProperty);
     } catch (error) {
         res.status(500).send('Error adding property');

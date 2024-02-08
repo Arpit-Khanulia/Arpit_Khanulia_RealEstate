@@ -1,7 +1,6 @@
 import express from 'express';
 import { register } from '../controller/register';
 import { login } from '../controller/login';
-import { authenticator } from '../middleware/auth';
 
 import { addProperty } from '../controller/addproperty';
 import { allProperty } from '../controller/allproperty';
@@ -15,8 +14,6 @@ import passport from 'passport';
 
 import passportConfig from '../middleware/passportConfig';
 passportConfig(passport);
-
-
 
 
 

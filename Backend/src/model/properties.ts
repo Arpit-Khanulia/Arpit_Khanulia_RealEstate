@@ -7,25 +7,24 @@ const propertiesSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    selleremail:{
-        type:String,
-        required:true
-    },
     location: {
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true
+    sellerEmail:{
+        type:String,
+        required:true
     },
     type: {
         type: String,
         required: true
+    },
+    price: {
+        type: String,
+        required: true
+    },
+    photoPath: {
+        type: String
     },
     sell: {
         type: Boolean,
@@ -35,10 +34,14 @@ const propertiesSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     },
-    photoPath: {
+    pincode:{
+        type:String,
+        required:true
+    },
+    description: {
         type: String,
         required: true
-    }
+    },
 });
 
 

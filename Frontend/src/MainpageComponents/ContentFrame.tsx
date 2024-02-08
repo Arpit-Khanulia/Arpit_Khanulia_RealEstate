@@ -1,8 +1,12 @@
 import { FunctionComponent } from "react";
 import TopNavBar from "./TopNavBar";
 import "./ContentFrame.css";
+import { useAppSelector } from "../Redux/Hooks";
+import { Link } from "react-router-dom";
 
 const ContentFrame: FunctionComponent = () => {
+
+  const data = useAppSelector(state=>state.saveUserAndToken.accessToken)
   return (
     <section className="content-frame">
       <div className="top-nav-bar-parent">
@@ -14,15 +18,17 @@ const ContentFrame: FunctionComponent = () => {
               From as low as $10 per day with limited time offer discounts.
             </h2>
             <div className="search-area">
+
+
               <button className="header-frame">
                 <div className="buy">Buy</div>
               </button>
               <button className="header-frame1">
                 <div className="rent">Rent</div>
               </button>
-              <button className="header-frame2">
+              {data && <Link to='/addproperty'> <button className="header-frame2">
                 <div className="sell">Sell</div>
-              </button>
+              </button></Link>}
             </div>
             <div className="title-text">
               <div className="nav-links-group">

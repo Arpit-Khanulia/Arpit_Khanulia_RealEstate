@@ -36,13 +36,12 @@ const initialState: UserResponse = {
   };
 
  const authUser = createSlice({
-
     initialState:initialState,
     name:'authUser',
     reducers:{
 
         saveUserAndToken: (state, action) => {
-            localStorage.setItem('user', JSON.stringify(action.payload.user));
+            localStorage.setItem('user', action.payload.user);
             localStorage.setItem('accessToken', action.payload.accessToken);
             state.user = action.payload.user;
             state.accessToken = action.payload.accessToken;

@@ -98,10 +98,7 @@ const RegisterScreen = () => {
             {errors.confirmpassword && touched.confirmpassword ? (<p>{errors.confirmpassword}</p>) :null}
             </div>
             <div className="mt-4 flex justify-between font-semibold text-sm">
-              <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
-                <input className="mr-1" type="checkbox" />
-                <span>Remember Me</span>
-              </label>
+ 
               <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
             </div>
             <div className="text-center md:text-left">
