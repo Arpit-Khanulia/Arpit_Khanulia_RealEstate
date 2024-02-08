@@ -35,19 +35,19 @@ const TopNavBar: FunctionComponent = () => {
         { data &&
 
         <div className="blog-article-frame">
-          <Link to='/'><button className="btn">
+          <Link to='/'><button className="btnn">
             <div className="home">Home</div>
           </button></Link>
           
-          <button className="btn">
+          <button className="btnn">
             <div className="about">Profile</div>
           </button>
 
-          <button className="btn">
+          <button className="btnn">
             <div className="about">Property</div>
           </button>
 
-          <button className="btn">
+          <button className="btnn">
             <div className="about">My Property</div>
           </button>
 

@@ -158,7 +158,7 @@
 }
 
 
-.btn {
+.btnn {
   margin: 0;
   padding: 0;
   border: none;
@@ -166,4 +166,23 @@
   cursor: pointer;
   font: inherit;
   color: inherit;
+
+  transition: all 0.3s ease;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff5a3c;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover:after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
 }

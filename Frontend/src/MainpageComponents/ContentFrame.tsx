@@ -41,7 +41,7 @@ const ContentFrame: FunctionComponent = () => {
                   />
                 </div>
 
-                  <select className="property-type btn line1" >Property Type
+                  <select className="property-type btnn line1" >Property Type
                     <option  >Type</option>
                     <option value="apartment">Apartment</option>
                     <option value="house">House</option>
