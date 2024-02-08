@@ -3,9 +3,47 @@ import TopNavBar from "./TopNavBar";
 import "./ContentFrame.css";
 import { useAppSelector } from "../Redux/Hooks";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import { useAppDispatch } from "../Redux/Hooks";
+import { propertysaved } from "../Redux/Slices/data";
+import { searchValidationSchema } from "../Schemas";
+
+
+
+interface initialValuestype  {
+
+
+  pincode:string
+  type:string
+
+}
+const initialValues:initialValuestype = {
+  pincode:"",
+  type:"",
+}
+
+
+
 
 const ContentFrame: FunctionComponent = () => {
+  
+  const dispatch = useAppDispatch();
 
+  const {values,handleBlur,handleChange,handleSubmit} =   useFormik({
+    initialValues:initialValues,
+    validationSchema:searchValidationSchema,
+    onSubmit : async(values,action)=>{
+      
+      console.log(values);
+      
+       dispatch(propertysaved(values))
+
+       action.resetForm();
+       
+    }
+  })
+
+  
   const data = useAppSelector(state=>state.saveUserAndToken.accessToken)
   return (
     <section className="content-frame">
@@ -13,7 +51,7 @@ const ContentFrame: FunctionComponent = () => {
         <TopNavBar />
         <div className="privacy-policy-frame">
           <h1 className="find-your-dream1">Find Your Dream Home</h1>
-          <form className="email-subscription-frame">
+          <form onSubmit={handleSubmit} className="email-subscription-frame">
             <h2 className="from-as-low">
               From as low as $10 per day with limited time offer discounts.
             </h2>
@@ -33,7 +71,7 @@ const ContentFrame: FunctionComponent = () => {
             <div className="title-text">
               <div className="nav-links-group">
                 <div className="line">
-                  <input
+                  <input  name="pincode" value={values.pincode} onChange={handleChange} onBlur={handleBlur}
                     style={{ width: "100%" }}
                     className="entar-keyword"
                     placeholder="Location Pincode"
@@ -41,7 +79,7 @@ const ContentFrame: FunctionComponent = () => {
                   />
                 </div>
 
-                  <select className="property-type btnn line1" >Property Type
+                  <select  name="type" value={values.type} onChange={handleChange} onBlur={handleBlur} className="property-type btnn line1" >Property Type
                     <option  >Type</option>
                     <option value="apartment">Apartment</option>
                     <option value="house">House</option>

@@ -5,7 +5,6 @@ type PropertyLocationType = {
   propertyDescription?: string;
   jennyWhite?: string;
 
-  /** Style props */
   propHeight?: CSSProperties["height"];
 };
 

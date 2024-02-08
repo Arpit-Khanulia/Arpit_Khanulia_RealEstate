@@ -7,7 +7,7 @@ import authUser from './Slices/User'
 export const store = configureStore({
   reducer: {
 
-    mycounter:myslice, 
+    propertySearched:myslice, 
     saveUserAndToken:authUser,
     [authApi.reducerPath] :authApi.reducer
     

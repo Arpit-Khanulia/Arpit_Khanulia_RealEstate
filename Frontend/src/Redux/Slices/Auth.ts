@@ -97,11 +97,18 @@ interface User {
            }),
            invalidatesTags: ['Auth'],
        }),
+       filterProperty: builder.mutation({
+           query: (body) => ({
+               url: '/filterproperty',
+               method: 'POST',
+               body,
+           }),
+       }),
 
    }),
 });
 
-export const { useLoginMutation, useRegisterMutation,useGetPropertiesQuery,useAddPropertyMutation} = authApi;
+export const { useLoginMutation, useRegisterMutation,useGetPropertiesQuery,useAddPropertyMutation,useFilterPropertyMutation} = authApi;
 
 
 

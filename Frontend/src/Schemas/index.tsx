@@ -27,3 +27,9 @@ export const propertyValidationSchema = yup.object().shape({
   pincode: yup.string().required(),
   description: yup.string().required(),
 });
+
+
+export const searchValidationSchema = yup.object().shape({
+  pincode: yup.string().required(),
+  type: yup.string().required(),
+});

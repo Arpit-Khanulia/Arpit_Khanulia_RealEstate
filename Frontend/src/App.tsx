@@ -6,6 +6,7 @@ import AddProperty from "./screen/AddProperty"
 
 
 
+
 const App = () => {
 
 
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="/register"  element={<RegisterScreen/> } />
           <Route path="/" element={<RealEstateWebsite />} />
           <Route path="/addproperty" element={<AddProperty />} />
-
+  
       </Routes>
     
     </BrowserRouter>

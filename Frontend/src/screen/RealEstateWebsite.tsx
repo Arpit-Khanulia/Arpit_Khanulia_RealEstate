@@ -8,7 +8,13 @@ import FrameComponent from "../MainpageComponents/FrameComponent";
 import LinksFrame from "../MainpageComponents/LinksFrame";
 import "./RealEstateWebsite.css";
 
+
 const RealEstateWebsite: FunctionComponent = () => {
+
+
+
+
+  
   return (
     <div className="real-estate-website">
       <ContentFrame />
@@ -28,50 +34,49 @@ const RealEstateWebsite: FunctionComponent = () => {
             propHeight="25px"
           />
           <LetstakeATourText2
-            tribbleStoryHouseForRent="Diamond Manco Apartment"
-            prop="10,000/"
-            beds="2 Beds"
-            baths="2 Baths"
-            sqFt="1000 Sq Ft"
-            propBackgroundImage="url('/frame-71592@3x.png')"
-            propHeight="unset"
-          />
-          {/* <LetstakeATourText /> */}
-          <LetstakeATourText2
-            tribbleStoryHouseForRent="Spaceious 2 Story Bunglow "
+            tribbleStoryHouseForRent="Luxurious Villa"
             prop="35,000/"
             beds="5 Beds"
             baths="3 Baths"
-            sqFt="2500 Sq Ft"
-            propBackgroundImage="url('/frame-71594@3x.png')"
-            propHeight="unset"
+            sqFt="3500 Sq Ft"
+            propBackgroundImage="url('/frame-71591@3x.png')"
+            propHeight="25px"
           />
           <LetstakeATourText2
-            tribbleStoryHouseForRent="Spaceious 2 Story Bunglow "
+            tribbleStoryHouseForRent="Luxurious Villa"
             prop="35,000/"
             beds="5 Beds"
             baths="3 Baths"
-            sqFt="2500 Sq Ft"
-            propBackgroundImage="url('/frame-71594@3x.png')"
-            propHeight="unset"
+            sqFt="3500 Sq Ft"
+            propBackgroundImage="url('/frame-71591@3x.png')"
+            propHeight="25px"
           />
           <LetstakeATourText2
-            tribbleStoryHouseForRent="Spaceious 2 Story Bunglow "
+            tribbleStoryHouseForRent="Luxurious Villa"
             prop="35,000/"
             beds="5 Beds"
             baths="3 Baths"
-            sqFt="2500 Sq Ft"
-            propBackgroundImage="url('/frame-71594@3x.png')"
-            propHeight="unset"
+            sqFt="3500 Sq Ft"
+            propBackgroundImage="url('/frame-71591@3x.png')"
+            propHeight="25px"
           />
           <LetstakeATourText2
-            tribbleStoryHouseForRent="Spaceious 2 Story Bunglow "
+            tribbleStoryHouseForRent="Luxurious Villa"
             prop="35,000/"
             beds="5 Beds"
             baths="3 Baths"
-            sqFt="2500 Sq Ft"
-            propBackgroundImage="url('/frame-71594@3x.png')"
-            propHeight="unset"
+            sqFt="3500 Sq Ft"
+            propBackgroundImage="url('/frame-71591@3x.png')"
+            propHeight="25px"
+          />
+          <LetstakeATourText2
+            tribbleStoryHouseForRent="Luxurious Villa"
+            prop="35,000/"
+            beds="5 Beds"
+            baths="3 Baths"
+            sqFt="3500 Sq Ft"
+            propBackgroundImage="url('/frame-71591@3x.png')"
+            propHeight="25px"
           />
         </div>
         <img className="maria-crist-text-child" alt="" src="/group-7113.svg" />
